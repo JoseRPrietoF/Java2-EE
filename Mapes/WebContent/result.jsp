@@ -18,9 +18,7 @@
 	Integer zoom = (Integer)request.getAttribute("zoom");
 	Integer centerX = (Integer)request.getAttribute("centerX");
 	Integer centerY = (Integer)request.getAttribute("centerY");
-	String capa = "%2C0%2CTU007RTS_ccavalls"; // cavalls
-	String capaNatura ="%2C0%2CTU007RTS_rutesturismen";
-	String src = "%2Chttp%3A%2F%2Fide.cime.es%2Fmenorca%2Fwms%2Fturisme%2F";
+
 	%>
 	<h1>The distance of <%=from %> to <%= to %> is: <%=distance %> Kms </h1>
 	<h2>by bike: <%=bike %></h2>
@@ -30,20 +28,7 @@
 	center X : <%=centerX%>
 	center Y : <%=centerY%>
 	<br/>
-	proves: <br>
-	<iframe width='625' height='500' frameborder='0' scrolling='no' marginheight='0' marginwidth='0' src='http://ide.cime.es/visorIDE/Iframe.aspx?wkid=25831&x=<%=centerX %>&y=<%=centerY %>&zoom=<%=zoom %>&srv=http%3A%2F%2Fide.cime.es%2FCache%2FIDEMenorca%2Fbaserefcatxe%2F_alllayers%2CWmsVacio.ashx<%=src%>&
-capas=<%=capa%>&trans=1%2C0%2C1&tit=%2C%2C'></iframe>
-	</br> normal: <br/>
-	<iframe width='625' height='500' frameborder='0' scrolling='no' marginheight='0' marginwidth='0' src='http://ide.cime.es/visorIDE/Iframe.aspx?wkid=25831&x=<%=centerX %>&y=<%=centerY %>&zoom=<%=zoom %>&srv=http%3A%2F%2Fide.cime.es%2FCache%2FIDEMenorca%2Fbaserefcatxe%2F_alllayers%2CWmsVacio.ashx&
-capas=%2C0&trans=1%2C0&tit=%2C%'></iframe>
-<br/> cami de cavalls <br/>
-<iframe width="625" height="500" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="http://ide.cime.es/visorIDE/Iframe.aspx?wkid=25831&x=589064.5&y=4423970&zoom=4&srv=http%3A%2F%2Fide.cime.es%2FCache%2FIDEMenorca%2Fbaserefcatxe%2F_alllayers%2CWmsVacio.ashx%2Chttp%3A%2F%2Fide.cime.es%2Fmenorca%2Fwms%2Fturisme%2F&
-capas=%2C0%2CTU007RTS_ccavalls&trans=1%2C0%2C1&tit=%2C%2C"></iframe>
-<br> Natura </br>
-<iframe width="625" height="500" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="http://ide.cime.es/visorIDE/Iframe.aspx?wkid=25831&x=589064.5&y=4423970&zoom=4&srv=http%3A%2F%2Fide.cime.es%2FCache%2FIDEMenorca%2Fbaserefcatxe%2F_alllayers%2CWmsVacio.ashx%2Chttp%3A%2F%2Fide.cime.es%2Fmenorca%2Fwms%2Fturisme%2F&
-capas=%2C0%2CTU007RTS_rutesturismen&trans=1%2C0%2C1&tit=%2C%2C"></iframe>
-</br> les dos </br>
-<iframe width="625" height="500" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="http://ide.cime.es/visorIDE/Iframe.aspx?wkid=25831&x=589064.5&y=4423970&zoom=4&srv=http%3A%2F%2Fide.cime.es%2FCache%2FIDEMenorca%2Fbaserefcatxe%2F_alllayers%2CWmsVacio.ashx%2Chttp%3A%2F%2Fide.cime.es%2Fmenorca%2Fwms%2Fturisme%2F%2Chttp%3A%2F%2Fide.cime.es%2Fmenorca%2Fwms%2Fturisme%2F&
-capas=%2C0%2CTU007RTS_ccavalls%2CTU007RTS_rutesturismen&trans=1%2C0%2C1%2C1&tit=%2C%2C%2C"></iframe>
+	<iframe width='625' height='500' frameborder='0' scrolling='no' marginheight='0' marginwidth='0' src='http://ide.cime.es/visorIDE/Iframe.aspx?wkid=25831&x=<%=centerX %>&y=<%=centerY %>&zoom=<%=zoom %>&srv=http%3A%2F%2Fide.cime.es%2FCache%2FIDEMenorca%2Fbaserefcatxe%2F_alllayers%2CWmsVacio.ashx&capas=%2C0&trans=1%2C0&tit=%2C'></iframe>
+
 </body>
 </html>
