@@ -14,6 +14,7 @@ public class City {
 	private int Y2;
 	private int centerX;
 	private int centerY;
+	private int zoom;
 
 	public City(){
 		cities = new HashMap<String, Integer>();
@@ -160,11 +161,31 @@ public class City {
 		this.Y2 = distances.get(cities.get(to)).get("getY");
 		this.iFrame = "<iframe width='625' height='500' frameborder='0' scrolling='no' marginheight='0' marginwidth='0' src='http://ide.cime.es/visorIDE/Iframe.aspx?wkid=25831&x="+this.X+"&y="+this.Y+"&zoom=6&srv=http%3A%2F%2Fide.cime.es%2FCache%2FIDEMenorca%2Fbaserefcatxe%2F_alllayers%2CWmsVacio.ashx&capas=%2C0&trans=1%2C0&tit=%2C'></iframe>";
 
-		this.centerX = (this.X - this.X2) / 2;
-		this.centerY = (this.Y - this.Y2)/ 2 ;
+		calculateCenter();
+		calculateZoom();
 		
 		return distances.get(cities.get(from)).get(to);
 
+	}
+	
+	public int getZoom() {
+		return zoom;
+	}
+
+	public void setZoom(int zoom) {
+		this.zoom = zoom;
+	}
+
+	private void calculateCenter(){
+		this.centerX = (this.X + this.X2) / 2;
+		this.centerY = (this.Y + this.Y2)/ 2 ;
+	}
+	
+	private void calculateZoom() {
+		int i = Math.abs(this.X - this.X2);
+		if (i < 10000) this.zoom = 5;
+		else if (i >= 10000 && i < 25000 ) this.zoom = 4;
+		else this.zoom = 3;
 	}
 
 	public int getCenterX() {

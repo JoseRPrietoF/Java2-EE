@@ -57,6 +57,7 @@ public class Maps extends HttpServlet {
 		request.setAttribute("y2", c.getY2());
 		request.setAttribute("centerX",c.getCenterX());
 		request.setAttribute("centerY", c.getCenterY());
+		request.setAttribute("zoom", c.getZoom());
 		//String iframe = "";
 		RequestDispatcher view = request.getRequestDispatcher("result.jsp");
 		view.forward(request, response);
