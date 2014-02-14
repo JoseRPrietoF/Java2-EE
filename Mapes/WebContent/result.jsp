@@ -18,7 +18,6 @@
 	Integer zoom = (Integer)request.getAttribute("zoom");
 	Integer centerX = (Integer)request.getAttribute("centerX");
 	Integer centerY = (Integer)request.getAttribute("centerY");
-	//String iFrame = "<iframe width='625' height='500' frameborder='0' scrolling='no' marginheight='0' marginwidth='0' src='http://ide.cime.es/visorIDE/Iframe.aspx?wkid=25831&x="+x+"&y="+y+"&zoom=6&srv=http%3A%2F%2Fide.cime.es%2FCache%2FIDEMenorca%2Fbaserefcatxe%2F_alllayers%2CWmsVacio.ashx&capas=%2C0&trans=1%2C0&tit=%2C'></iframe>";
 
 	%>
 	<h1>The distance of <%=from %> to <%= to %> is: <%=distance %> Kms </h1>
