@@ -29,6 +29,8 @@ public class City {
 		cities = new HashMap<String, Integer>();
 		distances = new ArrayList<HashMap<String, Integer>>();
 		calculteDistances();
+		calculateCenter();
+		calculateZoom();
 	}
 
 	@Override
