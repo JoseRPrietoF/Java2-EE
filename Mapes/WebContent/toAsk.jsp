@@ -36,7 +36,9 @@
 	</form>
 	<!-- 
 	The cities now are running are: Mao - Alaior, Mao - Es Castell, Mao - Ciutadella (And all reverses)
-	
+	Added to ask jsp 4 input type radio, to select the cities.
+	In the model class City add a method called "googleMap" for choose the map from google, depending on the parameters (cities and method)
+	On the controller (servlet) use this method and in the final JSP response, add the google map or IDE Menorca map
 	 -->
 </body>
 </html>
