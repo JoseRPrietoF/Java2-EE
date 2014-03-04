@@ -39,6 +39,8 @@ public class Maps extends HttpServlet {
 		response.setContentType("text/html");
 		String from = request.getParameter("from");
 		String to = request.getParameter("to");
+		String use = request.getParameter("use");
+		String method = request.getParameter("method");
 		City c = new City();
 		int distance = c.getDistance(from, to);
 		float bike = ((float)distance / 20) *60;
@@ -58,7 +60,13 @@ public class Maps extends HttpServlet {
 		request.setAttribute("centerX",c.getCenterX());
 		request.setAttribute("centerY", c.getCenterY());
 		request.setAttribute("zoom", c.getZoom());
-		//String iframe = "";
+		request.setAttribute("use", use);
+		request.setAttribute("method", method);
+		String map = "no map";
+		if (use.equals("google")){
+			map = c.googleMap(from, to, method);
+		}	
+		request.setAttribute("map", map);
 		RequestDispatcher view = request.getRequestDispatcher("result.jsp");
 		view.forward(request, response);
 	}

@@ -26,8 +26,17 @@
 		}%>
 
 	</select> 
-	
+	<br/>
+	<h3>Use:</h3>
+	<label><input type="radio" name="use" value="ide" checked >IDE Menorca</label><br>
+	<label><input type="radio" name="use" value="google" >Google Maps</label><br>
+		<label><input type="radio" name="method" value="car" checked >By car</label><br>
+		<label><input type="radio" name="method" value="foot" >By foot</label><br>
 		<input type="Submit" value="Send">
 	</form>
+	<!-- 
+	The cities now are running are: Mao - Alaior, Mao - Es Castell, Mao - Ciutadella (And all reverses)
+	
+	 -->
 </body>
 </html>
